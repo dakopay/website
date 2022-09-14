@@ -60,33 +60,8 @@
 </template>
 
 <script>
-	import { checkAddress } from '@moneymafia/repa-sdk';
-
-	function toHex(str) {
-		var hex = '';
-		for (var i = 0; i < str.length; i++) {
-			hex += '' + str.charCodeAt(i).toString(16);
-		}
-		return hex;
-	}
-
-	async function encodeSubscription(_networkId, _boss, _token, _cost, _initdays = 0) {
-		var input_boss = await checkAddress(_boss);
-		var input_token = await checkAddress(_token);
-
-		var obj = JSON.stringify({
-			network: _networkId,
-			boss: input_boss,
-			token: input_token,
-			cost: _cost,
-			initdays: _initdays,
-		});
-
-		var hash = toHex(obj) || null;
-
-		return 'https://join.repa.gg?hash=' + hash;
-	}
-
+	import { checkAddress, encodeSubscription } from '@moneymafia/repa-sdk';
+	
 	export default {
 		data() {
 			return {
