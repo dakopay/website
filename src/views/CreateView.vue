@@ -53,7 +53,7 @@
 			</button>
 		</div>
 
-		<div class="py-10">
+		<div class="py-10" v-if="link">
 			<textarea v-model="link" rows="3" class="textarea textarea-success w-full max-w-xl"></textarea>
 		</div>
 	</div>
@@ -61,7 +61,7 @@
 
 <script>
 	import { checkAddress, encodeSubscription } from '@moneymafia/repa-sdk';
-	
+
 	export default {
 		data() {
 			return {
@@ -69,7 +69,7 @@
 				token: '0x000000000000000000000000000000000000dead',
 				cost: 2,
 				day: 0,
-				link: '...........',
+				link: null,
 				showDAys: false,
 				chainNames: {
 					TESTNET: '5',
@@ -82,9 +82,9 @@
 
 		methods: {
 			async genLink() {
-			        var mec = await checkAddress(this.merchant);
-                                var tok = await checkAddress(this.token);
-				
+				var mec = await checkAddress(this.merchant);
+				var tok = await checkAddress(this.token);
+
 				this.link = await encodeSubscription(this.chainNames[this.chainName], mec, tok, this.cost, this.day);
 			},
 		},
