@@ -82,7 +82,10 @@
 
 		methods: {
 			async genLink() {
-				this.link = await encodeSubscription(this.chainNames[this.chainName], this.merchant, this.token, this.cost, this.day);
+			        var mec = await checkAddress(this.merchant);
+                                var tok = await checkAddress(this.token);
+				
+				this.link = await encodeSubscription(this.chainNames[this.chainName], mec, tok, this.cost, this.day);
 			},
 		},
 	};
