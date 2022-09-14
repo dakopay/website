@@ -46,7 +46,7 @@
 	<section class="bg-gray-50">
 		<div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
 			<div class="flex justify-center mt-8 space-x-6">
-				<a href="https://t.me/autopayninja">
+				<a href="https://t.me/projectrepa">
 					<span class="sr-only">Telegram</span>
 					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 48 48" style="fill: #000000">
 						<path fill="#29b6f6" d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"></path>
@@ -61,7 +61,7 @@
 						></path>
 					</svg>
 				</a>
-				<a href="https://github.com/moneymafia?q=autopayninja&type=all&language=&sort=">
+				<a href="https://github.com/moneymafia?q=repa&type=all&language=&sort=">
 					<span class="sr-only">Github</span>
 					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 64 64" style="fill: #000000">
 						<path

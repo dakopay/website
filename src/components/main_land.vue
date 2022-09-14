@@ -1,7 +1,7 @@
 <template>
 	<div class="flex flex-row mx-auto max-w-6xl py-40 px-10">
 		<div class="basis-1/2 m-auto">
-			<h1 class="relative mb-4 text-5xl font-black leading-tight text-gray-700 uppercase">Start Accepting Recurring Cryptocurrency Payments</h1>
+			<h1 class="relative mb-4 text-xl md:text-5xl font-black leading-tight text-gray-700 uppercase">Start Accepting Recurring Cryptocurrency Payments</h1>
 
 			<router-link
 				:to="{ name: 'create' }"
@@ -9,7 +9,7 @@
 				>Create Subscription</router-link
 			>
 		</div>
-		<div class="basis-1/2 m-auto">
+		<div class="basis-1/2 m-auto hidden md:block">
 			<img class="w-full h-full" src="img/tokens.png" />
 		</div>
 	</div>
