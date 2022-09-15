@@ -106,6 +106,7 @@
 						var jh = await tokenDetails(tok);
 
 						this.tokensymbol = jh.symbol;
+
 						this.tokenname = jh.name;
 					}
 				} catch (error) {
