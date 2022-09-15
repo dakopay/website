@@ -85,7 +85,8 @@
 				var mec = await checkAddress(this.merchant);
 				var tok = await checkAddress(this.token);
 
-				this.link = await encodeSubscription(this.chainNames[this.chainName], mec, tok, this.cost, this.day);
+				var link = await encodeSubscription(this.chainNames[this.chainName], mec, tok, this.cost, this.day);
+				this.link = link.link;
 			},
 		},
 	};
