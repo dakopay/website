@@ -10,9 +10,13 @@
 
 		<div class="form-control w-full max-w-xl py-5">
 			<label class="label">
-				<span class="label-text">TOKEN Address</span>
+				<span class="label-text">Token Address</span>
 			</label>
-			<input v-model="token" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xl" />
+			<input v-model="token" type="text" placeholder="Type here" @change="refreshToken()" class="input input-bordered w-full max-w-xl" />
+
+			<div class="py-5" v-if="tokensymbol">
+				<span class="px-2 py-2 text-base rounded-full text-white bg-red-400"> {{ tokenname }} ({{ tokensymbol }}) </span>
+			</div>
 		</div>
 
 		<div class="form-control w-full max-w-xl py-5">
@@ -54,19 +58,21 @@
 		</div>
 
 		<div class="py-10" v-if="link">
-			<textarea v-model="link" rows="3" class="textarea textarea-success w-full max-w-xl"></textarea>
+			<textarea v-model="link" rows="5" class="textarea textarea-success w-full max-w-xl"></textarea>
 		</div>
 	</div>
 </template>
 
 <script>
-	import { checkAddress, encodeSubscription } from '@moneymafia/repa-sdk';
+	import { checkAddress, encodeSubscription, tokenDetails, setChain } from '@moneymafia/repa-sdk';
 
 	export default {
 		data() {
 			return {
 				merchant: this.$store.state.address || '0x000000000000000000000000000000000000dead',
 				token: '0x000000000000000000000000000000000000dead',
+				tokensymbol: null,
+				tokenname: null,
 				cost: 2,
 				day: 0,
 				link: null,
@@ -83,10 +89,28 @@
 		methods: {
 			async genLink() {
 				var mec = await checkAddress(this.merchant);
+
 				var tok = await checkAddress(this.token);
 
-				var link = await encodeSubscription(this.chainNames[this.chainName], mec, tok, this.cost, this.day);
-				this.link = link.link;
+				var subhash = await encodeSubscription(this.chainNames[this.chainName], mec, tok, this.cost, this.day);
+
+				this.link = subhash.link;
+			},
+			async refreshToken() {
+				try {
+					var tok = await checkAddress(this.token);
+
+					setChain(this.chainNames[this.chainName]);
+
+					if (tok) {
+						var jh = await tokenDetails(tok);
+
+						this.tokensymbol = jh.symbol;
+						this.tokenname = jh.name;
+					}
+				} catch (error) {
+					console.log(error);
+				}
 			},
 		},
 	};
