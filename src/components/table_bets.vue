@@ -22,6 +22,7 @@
 						<tbody>
 							<tr class="hover" v-for="(item, index) in table" v-bind:key="item.id">
 								<th>{{ index + 1 }}</th>
+
 								<td>
 									<router-link :to="{ name: 'account', params: { id: item.user, chain: currentchain } }"> {{ trim(item.user) }}</router-link>
 								</td>
