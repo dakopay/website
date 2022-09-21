@@ -1,68 +1,67 @@
 <template>
 	<div>
-		<section class="w-full py-16 bg-white lg:py-24">
-			<div class="px-12 mx-auto text-center max-w-7xl">
-				<div class="space-y-12 md:text-left">
-					<div class="mb-20 space-y-5 sm:mx-auto sm:max-w-xl md:max-w-2xl sm:space-y-4 lg:max-w-5xl hidden md:block">
-						<h2 class="relative text-4xl font-extrabold tracking-tight sm:text-5xl">Hello 👋</h2>
-						<p class="text-xl text-gray-500">
-							{{ account }}
-						</p>
-					</div>
-					<div class="mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-2 lg:max-w-5xl py-20">
-						<div class="space-y-6 text-center lg:ml-0 md:ml-10 hover:scale-150">
-							<router-link :to="{ name: 'account_out', params: { id: id, chain: chain } }">
-								<div class="w-48 h-48 p-2 mx-auto md:w-56 md:h-56">
-									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="relative z-20 w-full h-full rounded-xl text-pink-200">
-										<path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
-									</svg>
-								</div>
-								<div class="space-y-2">
-									<div class="space-y-1 text-lg font-medium leading-6">
-										<h3>Subscriptions</h3>
-									</div>
-								</div>
-							</router-link>
+		<section class="container mx-auto py-10 md:py-20 antialiased">
+			<section class="grid gap-8 placeholder:grid-cols-1 lg:grid-cols-4">
+				<router-link :to="{ name: 'account_out', params: { id: id, chain: chain } }">
+					<article class="mx-auto w-full bg-cover bg-center cursor-pointer transform duration-500 hover:-translate-y-1 shadow-2xl rounded-xl py-10 col-span-1">
+						<div class="w-48 h-48 py-5 mx-auto md:w-56 md:h-56">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-full h-full rounded-xl text-pink-200">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+							</svg>
 						</div>
+						<h2 class="text-center text-3xl font-bold min-h-3 px-12">Subscriptions</h2>
+					</article>
+				</router-link>
 
-						<div class="space-y-6 text-center lg:mr-0 md:mr-10 hover:scale-150">
-							<router-link :to="{ name: 'account_in', params: { id: id, chain: chain } }">
-								<div class="w-48 h-48 p-2 mx-auto md:w-56 md:h-56">
-									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="relative z-20 w-full h-full rounded-xl text-green-200">
-										<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-									</svg>
-								</div>
-								<div class="space-y-2">
-									<div class="space-y-1 text-lg font-medium leading-6">
-										<h3>Subscibers</h3>
-									</div>
-								</div>
-							</router-link>
+				<router-link :to="{ name: 'account_in', params: { id: id, chain: chain } }">
+					<article class="mx-auto w-full bg-cover bg-center cursor-pointer transform duration-500 hover:-translate-y-1 shadow-2xl rounded-xl py-10 col-span-1">
+						<div class="w-48 h-48 py-5 mx-auto md:w-56 md:h-56">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="relative z-20 w-full h-full rounded-xl text-green-200">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+							</svg>
+						</div>
+						<h2 class="text-center text-3xl font-bold min-h-3 px-12">Subscibers</h2>
+					</article>
+				</router-link>
+
+				<article class="mx-auto w-full bg-cover bg-center cursor-pointer transform duration-500 hover:-translate-y-1 shadow-2xl rounded-xl py-10 col-span-2" v-if="data.canUserPay && formattedBal > 1">
+					<div class="px-10">
+						<p class="mb-5 text-sm font-bold text-purple-500 uppercase">COLLECT PENDING SUBSCIPTION</p>
+						<h1 class="text-3xl font-bold">
+							<span class="text-gray-900">{{ formattedBal }} </span> <span class="text-purple-600">{{ data.tokenInfo.symbol }}</span>
+						</h1>
+						<p class="text-base text-gray-500 sm:text-lg">Last Paid : {{ data.data.unpaidInDay }} Days Ago</p>
+						<div class="flex flex-col items-center w-full space-x-5 lg:flex-row py-5">
+							<a @click="collect()" class="max-w-xl px-5 py-5 text-2xl font-medium text-center text-white bg-purple-600 shadow-xl hover:bg-purple-700 rounded-3xl cursor-pointer">COLLECT</a>
 						</div>
 					</div>
-				</div>
-			</div>
+				</article>
+			</section>
 		</section>
 
-		<section class="w-full m-auto mt-5 sm:mt-16 lg:mt-20 2xl:mt-32" v-if="data.canUserPay && formattedBal > 1">
-			<div class="flex flex-col items-center h-full mx-auto max-w-7xl">
-				<div class="z-10 w-full mb-5 space-y-10 sm:mb-8 xl:mb-12 2xl:mb-16">
-					<p class="-mb-5 text-sm font-bold text-purple-500 uppercase">COLLECT PENDING SUBSCIPTION</p>
-					<h1 class="text-5xl font-bold xm:text-7xl lg:text-9xl">
-						<span class="text-gray-900">{{ formattedBal }} </span> <span class="text-purple-600">{{ data.tokenInfo.symbol }}</span>
-					</h1>
-					<p class="text-base text-gray-500 sm:text-lg">Last Paid : {{ data.data.unpaidInDay }} Days Ago</p>
-					<div class="flex flex-col items-center w-full space-x-5 lg:flex-row">
-						<a @click="collect()" class="w-full px-12 py-6 text-2xl font-medium text-center text-white bg-purple-600 shadow-xl hover:bg-purple-700 lg:w-auto rounded-3xl cursor-pointer">COLLECT</a>
-					</div>
-				</div>
-			</div>
+		<section class="container mx-auto py-10 md:py-20 antialiased">
+			<section class="grid lg:grid-cols-2 2xl:grid-cols-4 grid-cols-1 gap-8">
+				<article class="mx-auto w-full p-2 bg-cover bg-center cursor-pointer transform duration-500 hover:-translate-y-1 shadow-2xl rounded-xl">
+					<img class="mx-auto mb-20 mt-10 w-40" src="img/network/twitter.png" />
+					<p class="m-4 text-lg p-4 leading-relaxed text-center">CONNECTED ✅</p>
+				</article>
+
+				<article class="mx-autow-full p-2 bg-cover bg-center cursor-pointer transform duration-500 hover:-translate-y-1 shadow-2xl rounded-xl">
+					<img class="mx-auto mb-20 mt-10 w-40" src="img/network/telegram.png" />
+					<p class="m-4 text-lg p-4 leading-relaxed text-center">CONNECTED ✅</p>
+				</article>
+
+				<article class="mx-auto w-full p-2 bg-cover bg-center cursor-pointer transform duration-500 hover:-translate-y-1 shadow-2xl rounded-xl">
+					<img class="mx-auto mb-20 mt-10 w-40" src="img/network/discord.png" />
+					<p class="m-4 text-lg p-4 leading-relaxed text-center">CONNECTED ✅</p>
+				</article>
+			</section>
 		</section>
 	</div>
 </template>
 
 <script>
-	import { ABI, checkAddress, setChain, randomCollect, getNetwork } from '@moneymafia/repa-sdk';
+	import { ABI, checkAddress, setChain, randomCollect, getNetwork, store_get } from '@moneymafia/repa-sdk';
 	import { ethers } from 'ethers';
 
 	export default {
@@ -73,6 +72,7 @@
 				account: '0x0000000000000000000000000000000000000000',
 				data: { canUserPay: false },
 				formattedBal: 0,
+				social: {},
 			};
 		},
 		methods: {
@@ -112,9 +112,22 @@
 
 			await setChain(this.chain);
 
-			this.data = await randomCollect(this.account);
+			try {
+				this.data = await randomCollect(this.account);
+				this.formattedBal = await ethers.utils.formatEther(this.data.data.unpaidInCost, this.data.tokenInfo.decimal);
+			} catch (error) {
+				console.log(error);
+			}
 
-			this.formattedBal = await ethers.utils.formatEther(this.data.data.unpaidInCost, this.data.tokenInfo.decimal);
+			var user_discord = await store_get(this.account, 'discord');
+			var user_telegram = await store_get(this.account, 'telegram');
+			var user_twitter = await store_get(this.account, 'twitter');
+
+			this.social = {
+				discord: user_discord,
+				telegram: user_telegram,
+				twitter: user_twitter,
+			};
 		},
 	};
 </script>
