@@ -39,20 +39,20 @@
 			</section>
 		</section>
 
-		<section class="container mx-auto py-10 md:py-20 antialiased">
-			<section class="grid lg:grid-cols-2 2xl:grid-cols-4 grid-cols-1 gap-8">
+		<section class="container mx-auto py-10 md:py-20 antialiased" v-if="chain == 5">
+			<section class="grid lg:grid-cols-5 grid-cols-1 gap-8">
 				<article class="mx-auto w-full p-2 bg-cover bg-center cursor-pointer transform duration-500 hover:-translate-y-1 shadow-2xl rounded-xl">
-					<img class="mx-auto mb-20 mt-10 w-40" src="img/network/twitter.png" />
+					<img class="mx-auto mb-5 mt-5 w-40" src="img/network/twitter.png" />
 					<p class="m-4 text-lg p-4 leading-relaxed text-center">CONNECTED ✅</p>
 				</article>
 
 				<article class="mx-autow-full p-2 bg-cover bg-center cursor-pointer transform duration-500 hover:-translate-y-1 shadow-2xl rounded-xl">
-					<img class="mx-auto mb-20 mt-10 w-40" src="img/network/telegram.png" />
+					<img class="mx-auto mb-5 mt-5 w-40" src="img/network/telegram.png" />
 					<p class="m-4 text-lg p-4 leading-relaxed text-center">CONNECTED ✅</p>
 				</article>
 
 				<article class="mx-auto w-full p-2 bg-cover bg-center cursor-pointer transform duration-500 hover:-translate-y-1 shadow-2xl rounded-xl">
-					<img class="mx-auto mb-20 mt-10 w-40" src="img/network/discord.png" />
+					<img class="mx-auto mb-5 mt-5 w-40" src="img/network/discord.png" />
 					<p class="m-4 text-lg p-4 leading-relaxed text-center">CONNECTED ✅</p>
 				</article>
 			</section>
