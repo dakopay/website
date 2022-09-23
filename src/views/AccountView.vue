@@ -43,17 +43,17 @@
 			<section class="grid lg:grid-cols-5 grid-cols-1 gap-8">
 				<article class="mx-auto w-full p-2 bg-cover bg-center cursor-pointer transform duration-500 hover:-translate-y-1 shadow-2xl rounded-xl">
 					<img class="mx-auto mb-5 mt-5 w-40" src="img/network/twitter.png" />
-					<p class="m-4 text-lg p-4 leading-relaxed text-center">CONNECTED ✅</p>
+					<p class="m-4 text-lg p-4 leading-relaxed text-center">@{{ user_twitter }} ✅</p>
 				</article>
 
 				<article class="mx-autow-full p-2 bg-cover bg-center cursor-pointer transform duration-500 hover:-translate-y-1 shadow-2xl rounded-xl">
 					<img class="mx-auto mb-5 mt-5 w-40" src="img/network/telegram.png" />
-					<p class="m-4 text-lg p-4 leading-relaxed text-center">CONNECTED ✅</p>
+					<p class="m-4 text-lg p-4 leading-relaxed text-center">@{{ user_telegram }} ✅</p>
 				</article>
 
 				<article class="mx-auto w-full p-2 bg-cover bg-center cursor-pointer transform duration-500 hover:-translate-y-1 shadow-2xl rounded-xl">
 					<img class="mx-auto mb-5 mt-5 w-40" src="img/network/discord.png" />
-					<p class="m-4 text-lg p-4 leading-relaxed text-center">CONNECTED ✅</p>
+					<p class="m-4 text-lg p-4 leading-relaxed text-center">@{{ user_discord }} ✅</p>
 				</article>
 			</section>
 		</section>
@@ -72,7 +72,9 @@
 				account: '0x0000000000000000000000000000000000000000',
 				data: { canUserPay: false },
 				formattedBal: 0,
-				social: {},
+				user_discord: false,
+				user_telegram: false,
+				user_twitter: false,
 			};
 		},
 		methods: {
@@ -123,11 +125,17 @@
 			var user_telegram = await store_get(this.account, 'telegram');
 			var user_twitter = await store_get(this.account, 'twitter');
 
-			this.social = {
-				discord: user_discord,
-				telegram: user_telegram,
-				twitter: user_twitter,
-			};
+			if (user_discord.valid) {
+				this.user_discord = user_discord.result;
+			}
+
+			if (user_telegram.valid) {
+				this.user_telegram = user_telegram.result;
+			}
+
+			if (user_twitter.valid) {
+				this.user_twitter = user_twitter.result;
+			}
 		},
 	};
 </script>
