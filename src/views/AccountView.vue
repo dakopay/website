@@ -38,25 +38,6 @@
 				</article>
 			</section>
 		</section>
-
-		<section class="container mx-auto py-10 md:py-20 antialiased" v-if="chain == 5">
-			<section class="grid lg:grid-cols-5 grid-cols-1 gap-8">
-				<article class="mx-auto w-full p-2 bg-cover bg-center cursor-pointer transform duration-500 hover:-translate-y-1 shadow-2xl rounded-xl">
-					<img class="mx-auto mb-5 mt-5 w-40" src="img/network/twitter.png" />
-					<p class="m-4 text-lg p-4 leading-relaxed text-center">@{{ user_twitter }} ✅</p>
-				</article>
-
-				<article class="mx-autow-full p-2 bg-cover bg-center cursor-pointer transform duration-500 hover:-translate-y-1 shadow-2xl rounded-xl">
-					<img class="mx-auto mb-5 mt-5 w-40" src="img/network/telegram.png" />
-					<p class="m-4 text-lg p-4 leading-relaxed text-center">@{{ user_telegram }} ✅</p>
-				</article>
-
-				<article class="mx-auto w-full p-2 bg-cover bg-center cursor-pointer transform duration-500 hover:-translate-y-1 shadow-2xl rounded-xl">
-					<img class="mx-auto mb-5 mt-5 w-40" src="img/network/discord.png" />
-					<p class="m-4 text-lg p-4 leading-relaxed text-center">@{{ user_discord }} ✅</p>
-				</article>
-			</section>
-		</section>
 	</div>
 </template>
 
@@ -72,9 +53,6 @@
 				account: '0x0000000000000000000000000000000000000000',
 				data: { canUserPay: false },
 				formattedBal: 0,
-				user_discord: false,
-				user_telegram: false,
-				user_twitter: false,
 			};
 		},
 		methods: {
@@ -119,22 +97,6 @@
 				this.formattedBal = await ethers.utils.formatEther(this.data.data.unpaidInCost, this.data.tokenInfo.decimal);
 			} catch (error) {
 				console.log(error);
-			}
-
-			var user_discord = await store_get(this.account, 'discord');
-			var user_telegram = await store_get(this.account, 'telegram');
-			var user_twitter = await store_get(this.account, 'twitter');
-
-			if (user_discord.valid) {
-				this.user_discord = user_discord.result;
-			}
-
-			if (user_telegram.valid) {
-				this.user_telegram = user_telegram.result;
-			}
-
-			if (user_twitter.valid) {
-				this.user_twitter = user_twitter.result;
 			}
 		},
 	};
