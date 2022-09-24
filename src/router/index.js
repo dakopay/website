@@ -58,6 +58,12 @@ const routes = [
 		component: () => import(/* webpackChunkName: "about" */ '../views/AccountOut.vue'),
 		props: true,
 	},
+	{
+		path: '/connect/:name/:id',
+		name: 'connect',
+		component: () => import(/* webpackChunkName: "about" */ '../views/Connect.vue'),
+		props: true,
+	},
 ];
 
 const router = createRouter({
