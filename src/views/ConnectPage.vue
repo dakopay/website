@@ -28,8 +28,6 @@
 <script>
 	import { ethers } from 'ethers';
 
-	import detectEthereumProvider from '@metamask/detect-provider';
-
 	import { store_get } from '@moneymafia/repa-sdk';
 
 	const STOREABI = require('@/abi/store.json');
@@ -72,16 +70,14 @@
 			},
 		},
 		async mounted() {
-			const provider = await detectEthereumProvider();
+			if (window.ethereum) {
+				await window.ethereum.enable();
 
-			if (provider) {
-				await provider.enable();
-
-				const accounts = await provider.request({
+				const accounts = await window.ethereum.request({
 					method: 'eth_requestAccounts',
 				});
 
-				const chainId = await provider.request({
+				const chainId = await window.ethereum.request({
 					method: 'eth_chainId',
 				});
 
@@ -93,7 +89,7 @@
 					alert('Please switch to Groli Network');
 				}
 
-				const balance = await provider.request({
+				const balance = await window.ethereum.request({
 					method: 'eth_getBalance',
 					params: [this.account, 'latest'],
 				});
