@@ -61,7 +61,7 @@ const routes = [
 	{
 		path: '/connect/:name/:id',
 		name: 'connect',
-		component: () => import(/* webpackChunkName: "about" */ '../views/Connect.vue'),
+		component: () => import(/* webpackChunkName: "about" */ '../views/ConnectPage.vue'),
 		props: true,
 	},
 ];
