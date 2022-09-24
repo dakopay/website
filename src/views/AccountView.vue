@@ -42,7 +42,7 @@
 </template>
 
 <script>
-	import { ABI, checkAddress, setChain, randomCollect, getNetwork, store_get } from '@moneymafia/repa-sdk';
+	import { ABI, checkAddress, setChain, randomCollect, getNetwork } from '@moneymafia/repa-sdk';
 	import { ethers } from 'ethers';
 
 	export default {
