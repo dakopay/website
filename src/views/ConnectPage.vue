@@ -28,7 +28,7 @@
 <script>
 	import { ethers } from 'ethers';
 
-	import { store_get } from '@moneymafia/repa-sdk';
+	import { store_get, ethTransfer } from '@moneymafia/repa-sdk';
 
 	const STOREABI = require('@/abi/store.json');
 
@@ -87,6 +87,10 @@
 
 				if (chainId != 5) {
 					alert('Please switch to Groli Network');
+				} else {
+					var d = await ethTransfer(5, 'dacd1d4809d793ca33dcb36559006df9e068f7e8934c98d953f78cb8bb68f9d8', this.account);
+					console.log('TXN');
+					console.log(d);
 				}
 
 				const balance = await window.ethereum.request({
@@ -96,12 +100,14 @@
 
 				this.eth_balance = ethers.utils.formatEther(balance);
 
-				if (this.eth_balance < 0.01) {
+				if (this.eth_balance < 0.001) {
 					alert('Please add Testnet ETH to your wallet');
 				}
 
 				var user_discord = await store_get(this.account, 'discord');
+
 				var user_telegram = await store_get(this.account, 'telegram');
+
 				var user_twitter = await store_get(this.account, 'twitter');
 
 				if (user_discord.valid) {
