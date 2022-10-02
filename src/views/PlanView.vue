@@ -16,7 +16,7 @@
 
 		<section class="bg-white py-16">
 			<div class="container m-auto px-6 space-y-8 text-gray-500 md:px-12 lg:px-20">
-				<div class="m-auto space-y-7 w-full pb-5 max-w-2xl">
+				<div class="m-auto space-y-7 w-full py-5 max-w-2xl">
 					<h1 class="text-4xl text-gray-700 font-bold text-center md:text-5xl poppins">Recent Subscriptions</h1>
 				</div>
 			</div>
@@ -130,7 +130,7 @@
 			try {
 				this.table = await graphSubscriptions(`where: {active : true, plan: "` + this.id + `"}`);
 
-				this.transfers = await graphTransfers(`where: {plan: "` + this.id + `"}`);
+				this.transfers = await graphTransfers(`first : 15, where: {plan: "` + this.id + `"}`);
 
 				var chainD = await getNetwork(this.chain);
 				this.chainExplorerUrl = chainD.explorer + '/tx/';

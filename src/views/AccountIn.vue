@@ -1,7 +1,12 @@
 <template>
 	<div class="px-5">
-		<profile_do :account="id" type="Merchant" />
-
+		<section class="bg-white py-16">
+			<div class="container m-auto px-6 space-y-8 text-gray-500 md:px-12 lg:px-20">
+				<div class="m-auto space-y-7 w-full py-20 max-w-2xl">
+					<h1 class="text-4xl text-gray-700 font-bold text-center md:text-5xl poppins uppercase">Your Plans</h1>
+				</div>
+			</div>
+		</section>
 		<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
 			<div class="p-2" v-for="item in table_m" v-bind:key="item.txn">
 				<router-link :to="{ name: 'plan', params: { id: item.plan, chain: chain } }">
@@ -15,6 +20,14 @@
 				</router-link>
 			</div>
 		</div>
+
+		<section class="bg-white py-16">
+			<div class="container m-auto px-6 space-y-8 text-gray-500 md:px-12 lg:px-20">
+				<div class="m-auto space-y-7 w-full py-10 max-w-3xl">
+					<h1 class="text-4xl text-gray-700 font-bold text-center md:text-5xl poppins uppercase">Recent Payments received</h1>
+				</div>
+			</div>
+		</section>
 
 		<div class="overflow-x-auto mx-auto container py-20">
 			<table class="table w-full">
@@ -66,13 +79,8 @@
 	import { ethers } from 'ethers';
 	const stc = require('string-to-color');
 
-	import profile_do from '@/components/profile_do.vue';
-
 	export default {
 		props: ['id', 'chain'],
-		components: {
-			profile_do,
-		},
 		data() {
 			return {
 				account: '0x0000000000000000000000000000000000000000',
@@ -107,7 +115,7 @@
 
 			this.table_m = this.table_m.filter((thing, index, self) => index === self.findIndex((t) => t.plan === thing.plan));
 
-			this.table_d = await graphTransfers(`where: {boss: "` + this.account + `"}`);
+			this.table_d = await graphTransfers(`first : 15, where: {boss: "` + this.account + `"}`);
 		},
 	};
 </script>
