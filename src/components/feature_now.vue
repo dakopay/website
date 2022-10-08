@@ -63,7 +63,7 @@
 
 								<h3 class="my-5 ml-3 text-lg font-bold text-gray-800">ERC20 Token</h3>
 							</div>
-							<p class="mb-2 text-gray-600">You can use any ERC-20 tokens in your subscription.</p>
+							<p class="mb-2 text-gray-600">You can use any ERC-20 tokens on repa.gg, built open for all tokens.</p>
 						</div>
 					</div>
 				</div>

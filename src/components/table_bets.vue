@@ -1,12 +1,13 @@
 <template>
 	<div class="hidden lg:block">
 		<section class="w-full py-20" @mouseleave="runMe()">
-			<div class="relative px-12 mx-auto xl:px-0">
+			<div class="relative px-5 mx-auto xl:px-0">
 				<h2 class="font-bold text-7xl sm:text-8xl uppercase">{{ chainJ }}</h2>
 				<h2 class="font-bold text-2xl sm:text-3xl uppercase mt-4">- Recent Subscriptions</h2>
 
-				<div class="my-20 border border-gray-800"></div>
-				<div class="overflow-x-auto mx-auto container py-20">
+				<div class="my-10 border border-gray-800"></div>
+
+				<div class="overflow-x-auto mx-auto container py-10">
 					<table class="table w-full">
 						<thead>
 							<tr>

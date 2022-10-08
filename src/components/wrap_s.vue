@@ -1,5 +1,5 @@
 <template>
-	<section class="w-full py-8 bg-white sm:py-12 md:py-16">
+	<section class="w-full py-16 bg-white sm:py-12 md:py-16">
 		<div class="px-10 mx-auto max-w-7xl">
 			<div class="flex items-center justify-between w-full pb-5 mb-8 border-b border-gray-200">
 				<h2 class="text-3xl font-bold text-gray-800">Learning Resources</h2>

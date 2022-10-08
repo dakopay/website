@@ -154,9 +154,9 @@
 			try {
 				this.token = await tokenDetails(this.id);
 
-				this.table = await graphSubscriptions(`where: {token: "` + this.id + `"}`);
+				this.table = await graphSubscriptions(`first : 20, where: {token: "` + this.id + `"}`);
 
-				this.transfers = await graphTransfers(`where: {token: "` + this.id + `"}`);
+				this.transfers = await graphTransfers(`first : 20, where: {token: "` + this.id + `"}`);
 			} catch (e) {
 				console.log(e);
 			}

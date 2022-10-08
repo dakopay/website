@@ -104,14 +104,14 @@
 			},
 		},
 		async mounted() {
+			await window.ethereum.enable();
+
 			if (window.ethereum) {
 				await window.ethereum.enable();
 
 				const accounts = await window.ethereum.request({
 					method: 'eth_requestAccounts',
 				});
-
-				await window.ethereum.enable();
 
 				var sChain = await window.ethereum.request({ method: 'eth_chainId' });
 
