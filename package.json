@@ -12,6 +12,7 @@
     "core-js": "^3.8.3",
     "daisyui": "^2.24.0",
     "ethers": "^5.7.0",
+    "mobile-device-detect": "^0.4.3",
     "string-to-color": "^2.2.2",
     "timeago.js": "^4.0.2",
     "vue": "^3.2.13",
