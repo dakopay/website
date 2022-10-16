@@ -18,14 +18,14 @@
 		async mounted() {
 			const decodedsub = await decodeSubscription(this.hash);
 
-			let sep44x = '9006';
+			let sep44x = 9006;
 
 			if (decodedsub.network == 56) {
-				sep44x = '9006';
+				sep44x = 9006;
 			}
 
 			if (decodedsub.network == 137) {
-				sep44x = '966';
+				sep44x = 966;
 			}
 
 			const desktop_url = `https://join.repa.gg?hash=`;
