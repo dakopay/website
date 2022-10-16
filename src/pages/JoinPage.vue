@@ -1,5 +1,5 @@
 <template>
-	<div>LOADING...................<br />{{ urltogo }}</div>
+	<div>LOADING...................</div>
 </template>
 
 <script>
@@ -42,8 +42,6 @@
 				console.log(desktop_url + this.hash);
 				this.urltogo = desktop_url + this.hash;
 			}
-
-			this.urltogo = mobile_url + this.hash;
 
 			window.location.href = this.urltogo;
 		},
