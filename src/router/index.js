@@ -58,7 +58,7 @@ const routes = [
 		props: true,
 	},
 	{
-		path: '/join/:id',
+		path: '/join/:hash',
 		name: 'join',
 		component: () => import(/* webpackChunkName: "about" */ '../pages/JoinPage.vue'),
 		props: true,
