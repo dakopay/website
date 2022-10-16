@@ -40,7 +40,7 @@
 			this.mobiledevice = isMobile;
 
 			if (window.ethereum) {
-				//	window.location.href = this.desktop_url;
+				window.location.href = this.desktop_url;
 			}
 		},
 	};
