@@ -69,16 +69,7 @@
 						></path>
 					</svg>
 				</a>
-				<a href="https://medium.com/@projectrepa">
-					<span class="sr-only">Medium</span>
-					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 64 64" style="fill: #000000">
-						<circle cx="14" cy="24" r="12" fill="#424242"></circle>
-						<ellipse cx="34" cy="24" fill="#424242" rx="6" ry="11"></ellipse>
-						<ellipse cx="44" cy="24" fill="#424242" rx="2" ry="10"></ellipse>
-					</svg>
-				</a>
 			</div>
-			<a href="https://moneymafia.eth.limo"><p class="mt-8 text-base leading-6 text-center text-gray-400">© MONEYMAFIA.ETH</p></a>
 		</div>
 	</section>
 </template>
