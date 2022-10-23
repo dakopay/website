@@ -8,7 +8,7 @@
 					:to="{ name: 'create' }"
 					class="px-7 py-4 bg-gray-900 text-white border-2 border-gray-900 hover:bg-white hover:text-gray-900 transition-all ease-out duration-150 rounded-xl flex items-center justify-center text-lg"
 				>
-					Create</router-link
+					Create Subscription</router-link
 				><a
 					href="https://doc.repa.gg"
 					class="px-7 flex items-center py-4 bg-gray-100 border-2 border-gray-100 hover:border-gray-900 justify-center hover:bg-white transition-all ease-out duration-150 text-gray-900 rounded-xl text-lg"
