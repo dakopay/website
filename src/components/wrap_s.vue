@@ -13,7 +13,7 @@
 
 			<div class="grid grid-cols-12 gap-6">
 				<div class="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
-					<a href="https://medium.com/@projectrepa/how-to-create-recurring-cryptocurrency-subscription-plan-aa821f5aa45d" class="relative block w-full h-64 overflow-hidden rounded">
+					<a href="https://doc.repa.gg/Guide/guide-create.html" class="relative block w-full h-64 overflow-hidden rounded">
 						<img class="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="img/create.jpg" />
 					</a>
 					<p class="text-xs font-bold text-gray-400 uppercase">Resources</p>
@@ -25,7 +25,7 @@
 				</div>
 
 				<div class="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
-					<a href="https://medium.com/@projectrepa/how-to-subscribe-to-a-recurring-payment-plan-on-blockchain-d2de2a71a38e" class="relative block w-full h-64 overflow-hidden rounded">
+					<a href="https://doc.repa.gg/Guide/guide-join.html" class="relative block w-full h-64 overflow-hidden rounded">
 						<img class="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="img/subscribe.jpg" />
 					</a>
 					<p class="text-xs font-bold text-gray-400 uppercase">Resources</p>
@@ -37,7 +37,7 @@
 				</div>
 
 				<div class="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4">
-					<a href="https://medium.com/@projectrepa/what-is-repa-gg-e5c856876ecb" class="relative block w-full h-64 overflow-hidden rounded">
+					<a href="https://doc.repa.gg/" class="relative block w-full h-64 overflow-hidden rounded">
 						<img class="object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105" src="img/repa_main.png" />
 					</a>
 					<p class="text-xs font-bold text-gray-400 uppercase">Resources</p>
