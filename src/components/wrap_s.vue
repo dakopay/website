@@ -1,6 +1,6 @@
 <template>
-	<section class="w-full py-16 bg-white sm:py-12 md:py-16">
-		<div class="px-10 mx-auto max-w-7xl">
+	<section class="bg-gray-50">
+		<div class="px-10 py-20 mx-auto container">
 			<div class="flex items-center justify-between w-full pb-5 mb-8 border-b border-gray-200">
 				<h2 class="text-3xl font-bold text-gray-800">Learning Resources</h2>
 				<a href="https://medium.com/@projectrepa" class="flex items-center text-base font-semibold text-blue-400 hover:text-blue-500 group">

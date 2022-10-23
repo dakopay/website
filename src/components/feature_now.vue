@@ -1,6 +1,6 @@
 <template>
 	<section class="relative w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-32 xl:pb-40">
-		<div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
+		<div class="container relative flex flex-col justify-between h-full px-10 mx-auto xl:px-0">
 			<div class="flex flex-col w-full mb-10 sm:flex-row">
 				<div class="w-full mb-10 sm:mb-0 sm:w-1/2">
 					<div class="relative h-full ml-0 mr-0 sm:mr-10">
