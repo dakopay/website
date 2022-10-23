@@ -119,7 +119,7 @@
 </template>
 
 <script>
-	import { setChain, graphSubscriptions, graphTransfers, tokenDetails, getNetwork } from '@moneymafia/repa-sdk';
+	import { setChain, graphSubscriptions, graphTransfers, tokenDetails, getNetwork } from 'repa-sdk';
 	import { format } from 'timeago.js';
 	import { ethers } from 'ethers';
 

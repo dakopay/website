@@ -50,7 +50,7 @@
 </template>
 
 <script>
-	import { setChain, graphSubscriptions, getNetwork } from '@moneymafia/repa-sdk';
+	import { setChain, graphSubscriptions, getNetwork } from 'repa-sdk';
 
 	import { format } from 'timeago.js';
 
