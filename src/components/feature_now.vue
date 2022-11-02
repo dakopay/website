@@ -11,7 +11,7 @@
 									<path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
 								</svg>
 
-								<h3 class="my-5 ml-3 text-xl font-bold text-gray-800">Zero Database</h3>
+								<h3 class="my-5 ml-3 text-xl font-bold text-gray-800">No Database</h3>
 							</div>
 							<p class="mb-2 text-gray-600">All the subscriptions are stored and managed inside smart contract. No any off-chain storage is being used.</p>
 						</div>
