@@ -10,7 +10,7 @@
 				>
 					Create Subscription</router-link
 				><a
-					href="https://doc.repa.gg"
+					href="https://github.com/projectrepa/documentation"
 					class="px-7 flex items-center py-4 bg-gray-100 border-2 border-gray-100 hover:border-gray-900 justify-center hover:bg-white transition-all ease-out duration-150 text-gray-900 rounded-xl text-lg"
 					><span>DOCS</span></a
 				>
