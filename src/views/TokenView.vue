@@ -18,7 +18,7 @@
 			</div>
 		</section>
 
-		<section class="bg-white py-16">
+		<section class="py-16">
 			<div class="container m-auto px-6 space-y-8 text-gray-500 md:px-12 lg:px-20">
 				<div class="m-auto space-y-7 w-full pb-5 max-w-2xl">
 					<h1 class="text-4xl text-gray-700 font-bold text-center md:text-5xl poppins">Recent Subscriptions</h1>
@@ -63,7 +63,7 @@
 			</table>
 		</div>
 
-		<section class="bg-white py-16">
+		<section class="py-16">
 			<div class="container m-auto px-6 space-y-8 text-gray-500 md:px-12 lg:px-20">
 				<div class="m-auto space-y-7 w-full pb-5 max-w-2xl">
 					<h1 class="text-4xl text-gray-700 font-bold text-center md:text-5xl poppins">Recent Transfers</h1>

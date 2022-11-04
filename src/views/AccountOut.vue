@@ -1,6 +1,6 @@
 <template>
 	<div class="px-5">
-		<section class="bg-white py-16">
+		<section class="py-16">
 			<div class="container m-auto px-6 space-y-8 text-gray-500 md:px-12 lg:px-20">
 				<div class="m-auto space-y-7 w-full py-20 max-w-3xl">
 					<h1 class="text-4xl text-gray-700 font-bold text-center md:text-5xl poppins uppercase">Your Subscriptions</h1>
@@ -22,7 +22,7 @@
 			</div>
 		</div>
 
-		<section class="bg-white py-16">
+		<section class="py-16">
 			<div class="container m-auto px-6 space-y-8 text-gray-500 md:px-12 lg:px-20">
 				<div class="m-auto space-y-7 w-full py-10 max-w-2xl">
 					<h1 class="text-4xl text-gray-700 font-bold text-center md:text-5xl poppins uppercase">Recent Payments Made</h1>
