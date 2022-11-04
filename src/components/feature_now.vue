@@ -13,7 +13,7 @@
 
 								<h3 class="my-5 ml-3 text-xl font-bold text-gray-800">No Database</h3>
 							</div>
-							<p class="mb-2 text-gray-600">All the subscriptions are stored and managed inside smart contract. No any off-chain storage is being used.</p>
+							<p class="mb-2 text-gray-600">All  subscriptions are stored and managed inside smart contracts. No any off-chain storage is being used.</p>
 						</div>
 					</div>
 				</div>
@@ -29,7 +29,7 @@
 
 								<h3 class="my-5 ml-3 text-xl font-bold text-gray-800">Multichain</h3>
 							</div>
-							<p class="mb-2 text-gray-600">We support multiple chains and you can use any of them. Currently we support BSC and MATIC chains.</p>
+							<p class="mb-2 text-gray-600">We support multiple chains. Currently we support Binance Smart Chain (BSC) and Polygon (MATIC).</p>
 						</div>
 					</div>
 				</div>
@@ -45,7 +45,7 @@
 
 								<h3 class="my-5 ml-3 text-xl font-bold text-gray-800">Easy integration</h3>
 							</div>
-							<p class="mb-2 text-gray-600">Create subscription and share link to the user. Once user start paying you, you have your plan enabled.</p>
+							<p class="mb-2 text-gray-600">Simply create a subscription link and share the link to the user. Once the user confirms the subscription, you have your subscription plan enabled.</p>
 						</div>
 					</div>
 				</div>
@@ -59,9 +59,9 @@
 									<path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
 								</svg>
 
-								<h3 class="my-5 ml-3 text-xl font-bold text-gray-800">ERC20 Token</h3>
+								<h3 class="my-5 ml-3 text-xl font-bold text-gray-800">ERC-20 tokens</h3>
 							</div>
-							<p class="mb-2 text-gray-600">You can use any ERC-20 tokens on repa.gg, built open for all tokens.</p>
+							<p class="mb-2 text-gray-600">You can use any ERC-20 token to pay for your subscription.</p>
 						</div>
 					</div>
 				</div>
