@@ -43,8 +43,8 @@
 
 		<div class="m-auto container"><router-view /></div>
 
-		<footer class="pb-6 pt-20 bg-gradient-to-r from-teal-100 to-yellow-100">
-			<div class="container mx-auto px-10 md:px-8">
+		<footer class="bg-gradient-to-r from-teal-100 to-yellow-100">
+			<div class="container mx-auto px-10 md:px-8 py-40">
 				<ul class="text-sm font-medium pb-10 sm:pb-20 grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-10">
 					<li class="space-y-5 row-span-2">
 						<h2 class="text-xs tracking-wide text-gray-900 uppercase font-bold">About</h2>
