@@ -52,12 +52,6 @@ const routes = [
 		component: () => import(/* webpackChunkName: "about" */ '../views/AccountOut.vue'),
 		props: true,
 	},
-	{
-		path: '/join/:hash',
-		name: 'join',
-		component: () => import(/* webpackChunkName: "about" */ '../pages/JoinPage.vue'),
-		props: true,
-	},
 ];
 
 const router = createRouter({
