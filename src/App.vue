@@ -50,13 +50,13 @@
 						<h2 class="text-xs tracking-wide text-gray-900 uppercase font-bold">About</h2>
 						<ul class="space-y-2 sm:space-y-4">
 							<li><a class="hover:text-gray-900 transition-colors duration-200 text-xl sm:text-2xl" href="https://repa.gg/#/about">About Us</a></li>
-							<li><a class="hover:text-gray-900 transition-colors duration-200 text-xl sm:text-2xl" href="https://github.com/projectrepa/documentation/blob/main/support.md">Support</a></li>
+							<li><a class="hover:text-gray-900 transition-colors duration-200 text-xl sm:text-2xl" href="https://t.me/projectrepa">Support</a></li>
 						</ul>
 					</li>
 					<li class="space-y-5 row-span-2">
 						<h2 class="text-xs tracking-wide text-gray-900 uppercase font-bold">Resources</h2>
 						<ul class="space-y-2 sm:space-y-4">
-							<li><a class="hover:text-gray-900 transition-colors duration-200 text-xl sm:text-2xl" href="https://github.com/projectrepa/documentation">Documentation</a></li>
+							<li><a class="hover:text-gray-900 transition-colors duration-200 text-xl sm:text-2xl" href="https://docs.repa.gg/">Documentation</a></li>
 							<li><a class="hover:text-gray-900 transition-colors duration-200 text-xl sm:text-2xl" href="https://github.com/projectrepa/documentation">Developer API</a></li>
 						</ul>
 					</li>
