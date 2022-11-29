@@ -12,9 +12,14 @@ const routes = [
 		component: () => import(/* webpackChunkName: "about" */ '../pages/AboutPage.vue'),
 	},
 	{
-		path: '/create',
-		name: 'create',
-		component: () => import(/* webpackChunkName: "about" */ '../views/CreateView.vue'),
+		path: '/createsub',
+		name: 'createsub',
+		component: () => import(/* webpackChunkName: "about" */ '../pages/CreateSub.vue'),
+	},
+	{
+		path: '/createdonate',
+		name: 'createdonate',
+		component: () => import(/* webpackChunkName: "about" */ '../pages/CreateDonate.vue'),
 	},
 	{
 		path: '/token/:chain/:id',

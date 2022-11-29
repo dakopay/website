@@ -13,6 +13,7 @@
 				<div class="inline-flex flex-col items-center sm:flex-row sm:ml-5 lg:justify-end">
 					<nav class="flex flex-wrap items-center space-x-4 text-sm md:text-lg font-semibold tracking-wide sm:space-x-6 uppercase">
 						<router-link to="/about">ABOUT</router-link>
+						<a href="https://docs.repa.gg/">DOCS</a>
 					</nav>
 					<router-link
 						v-if="connected"
