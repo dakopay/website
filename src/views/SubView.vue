@@ -83,7 +83,7 @@
 <script>
 	import { ethers } from 'ethers';
 	import { format } from 'timeago.js';
-	import { ABI, setChain, subscriptions, tokenDetails, graphTransfers, checkAddress, getNetwork } from 'repa-sdk';
+	import { ABI, setChain, subscriptions, tokenDetails, graphTransfers, checkAddress, getNetwork } from 'dakopay-sdk';
 
 	export default {
 		props: ['id', 'chain'],

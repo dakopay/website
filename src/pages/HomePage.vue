@@ -145,7 +145,7 @@
 </template>
 
 <script>
-	import { setChain, graphSubscriptions, getNetwork } from 'repa-sdk';
+	import { setChain, graphSubscriptions, getNetwork } from 'dakopay-sdk';
 
 	import { format } from 'timeago.js';
 

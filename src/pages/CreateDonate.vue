@@ -69,7 +69,7 @@
 </template>
 
 <script>
-	import { checkAddress } from 'repa-sdk';
+	import { checkAddress } from 'dakopay-sdk';
 
 	export default {
 		data() {
@@ -82,7 +82,7 @@
 			async refreshToken() {
 				var addr = await checkAddress(this.token);
 				if (addr) {
-					this.link = 'https://join.repa.gg/#/donate/' + addr;
+					this.link = 'https://join.dakopay.com/#/donate/' + addr;
 				} else {
 					this.link = 'WRONG ADDRESS';
 				}

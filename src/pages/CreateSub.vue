@@ -64,7 +64,7 @@
 </template>
 
 <script>
-	import { checkAddress, encodeSubscription, tokenDetails, setChain } from 'repa-sdk';
+	import { checkAddress, encodeSubscription, tokenDetails, setChain } from 'dakopay-sdk';
 
 	export default {
 		data() {

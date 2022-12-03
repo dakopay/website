@@ -13,7 +13,7 @@
 				<div class="inline-flex flex-col items-center sm:flex-row sm:ml-5 lg:justify-end">
 					<nav class="flex flex-wrap items-center space-x-4 text-sm md:text-lg font-semibold tracking-wide sm:space-x-6 uppercase">
 						<router-link to="/about">ABOUT</router-link>
-						<a href="https://docs.repa.gg/">DOCS</a>
+						<a href="https://documentation.dakopay.com/">DOCS</a>
 					</nav>
 					<router-link
 						v-if="connected"
@@ -50,32 +50,32 @@
 					<li class="space-y-5 row-span-2">
 						<h2 class="text-xs tracking-wide text-gray-900 uppercase font-bold">About</h2>
 						<ul class="space-y-2 sm:space-y-4">
-							<li><a class="hover:text-gray-900 transition-colors duration-200 text-xl sm:text-2xl" href="https://repa.gg/#/about">About Us</a></li>
-							<li><a class="hover:text-gray-900 transition-colors duration-200 text-xl sm:text-2xl" href="https://t.me/projectrepa">Support</a></li>
+							<li><a class="hover:text-gray-900 transition-colors duration-200 text-xl sm:text-2xl" href="https://dakopay.com/#/about">About Us</a></li>
+							<li><a class="hover:text-gray-900 transition-colors duration-200 text-xl sm:text-2xl" href="https://t.me/dakopay">Support</a></li>
 						</ul>
 					</li>
 					<li class="space-y-5 row-span-2">
 						<h2 class="text-xs tracking-wide text-gray-900 uppercase font-bold">Resources</h2>
 						<ul class="space-y-2 sm:space-y-4">
-							<li><a class="hover:text-gray-900 transition-colors duration-200 text-xl sm:text-2xl" href="https://docs.repa.gg/">Documentation</a></li>
-							<li><a class="hover:text-gray-900 transition-colors duration-200 text-xl sm:text-2xl" href="https://github.com/projectrepa/documentation">Developer API</a></li>
+							<li><a class="hover:text-gray-900 transition-colors duration-200 text-xl sm:text-2xl" href="https://documentation.dakopay.com/">Documentation</a></li>
+							<li><a class="hover:text-gray-900 transition-colors duration-200 text-xl sm:text-2xl" href="https://github.com/dakopay/documentation">Developer API</a></li>
 						</ul>
 					</li>
 					<li class="space-y-5">
 						<h2 class="text-xs tracking-wide text-gray-900 uppercase font-bold">Social</h2>
 						<ul class="space-y-2 sm:space-y-4">
-							<li><a class="hover:text-gray-900 transition-colors duration-200 text-xl sm:text-2xl" href="https://github.com/projectrepa">Github</a></li>
-							<li><a class="hover:text-gray-900 transition-colors duration-200 text-xl sm:text-2xl" href="https://t.me/projectrepa">Telegram</a></li>
+							<li><a class="hover:text-gray-900 transition-colors duration-200 text-xl sm:text-2xl" href="https://github.com/dakopay">Github</a></li>
+							<li><a class="hover:text-gray-900 transition-colors duration-200 text-xl sm:text-2xl" href="https://t.me/dakopay">Telegram</a></li>
 						</ul>
 					</li>
 				</ul>
 				<div class="flex flex-col-reverse justify-between pt-10 sm:pt-8 pb-4 border-t lg:flex-row bg-top border-gray-900">
 					<ul class="flex flex-col space-y-1 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
-						<li><a href="https://repa.gg" class="text-sm sm:text-base text-black transition-colors duration-300 font-semibold">Disclaimers</a></li>
-						<li><a href="https://repa.gg" class="text-sm sm:text-base text-black transition-colors duration-300 font-semibold">Terms &amp; Conditions</a></li>
+						<li><a href="https://dakopay.com" class="text-sm sm:text-base text-black transition-colors duration-300 font-semibold">Disclaimers</a></li>
+						<li><a href="https://dakopay.com" class="text-sm sm:text-base text-black transition-colors duration-300 font-semibold">Terms &amp; Conditions</a></li>
 					</ul>
 					<ul class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
-						<a href="https://repa.gg" class="text-md text-black transition-colors duration-300 hover:text-deep-purple-accent-400 font-semibold tracking-tight">© 2022</a>
+						<a href="https://dakopay.com" class="text-md text-black transition-colors duration-300 hover:text-deep-purple-accent-400 font-semibold tracking-tight">© 2022</a>
 					</ul>
 				</div>
 			</div>

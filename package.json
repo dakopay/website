@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "npm i repa-sdk && vue-cli-service build",
+    "build": "npm i dakopay-sdk && vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -12,7 +12,7 @@
     "daisyui": "^2.24.0",
     "ethers": "^5.7.0",
     "mobile-device-detect": "^0.4.3",
-    "repa-sdk": "github:projectrepa/SDK",
+    "dakopay-sdk": "github:dakopay/SDK",
     "string-to-color": "^2.2.2",
     "timeago.js": "^4.0.2",
     "vue": "^3.2.13",

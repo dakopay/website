@@ -99,7 +99,7 @@
 </template>
 
 <script>
-	import { setChain, graphSubscriptions, graphTransfers, getNetwork } from 'repa-sdk';
+	import { setChain, graphSubscriptions, graphTransfers, getNetwork } from 'dakopay-sdk';
 	import { format } from 'timeago.js';
 	import { ethers } from 'ethers';
 

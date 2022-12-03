@@ -42,7 +42,7 @@
 </template>
 
 <script>
-	import { ABI, checkAddress, setChain, randomCollect, getNetwork } from 'repa-sdk';
+	import { ABI, checkAddress, setChain, randomCollect, getNetwork } from 'dakopay-sdk';
 	import { ethers } from 'ethers';
 
 	export default {
