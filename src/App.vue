@@ -13,7 +13,7 @@
 				<div class="inline-flex flex-col items-center sm:flex-row sm:ml-5 lg:justify-end">
 					<nav class="flex flex-wrap items-center space-x-4 text-sm md:text-lg font-semibold tracking-wide sm:space-x-6 uppercase">
 						<router-link to="/about">ABOUT</router-link>
-						<a href="https://documentation.dakopay.com/">DOCS</a>
+						<a href="https://docs.dakopay.com/">DOCS</a>
 					</nav>
 					<router-link
 						v-if="connected"
@@ -57,7 +57,7 @@
 					<li class="space-y-5 row-span-2">
 						<h2 class="text-xs tracking-wide text-gray-900 uppercase font-bold">Resources</h2>
 						<ul class="space-y-2 sm:space-y-4">
-							<li><a class="hover:text-gray-900 transition-colors duration-200 text-xl sm:text-2xl" href="https://documentation.dakopay.com/">Documentation</a></li>
+							<li><a class="hover:text-gray-900 transition-colors duration-200 text-xl sm:text-2xl" href="https://docs.dakopay.com/">Documentation</a></li>
 							<li><a class="hover:text-gray-900 transition-colors duration-200 text-xl sm:text-2xl" href="https://github.com/dakopay/documentation">Developer API</a></li>
 						</ul>
 					</li>
